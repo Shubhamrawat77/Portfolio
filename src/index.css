@@ -1,0 +1,20 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Playfair';
+    src: url('/myPortfolio/public/font/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgA.ttf')
+}
+
+@font-face {
+    font-family: 'Quicksand';
+    src: url('/myPortfolio/public/font/Quicksand-VariableFont_wght.ttf')
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
