@@ -6,20 +6,28 @@ function Form() {
   const{register,handleSubmit,reset}=useForm()
 
   const submit= (data)=>{
-    console.log(data)
-     emailjs
-       .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", form.current, {
-         publicKey: "YOUR_PUBLIC_KEY",
-       })
-       .then(
-         () => {
-           console.log("SUCCESS!");
-         },
-         (error) => {
-           console.log("FAILED...", error.text);
-         }
-       );
-    reset();
+    emailjs
+      .send(
+        import.meta.env.VITE_YOUR_SERVICE_ID,
+        import.meta.env.VITE_YOUR_TEMPLATE_ID,
+        {
+          user_name: data.user_name,
+          email: data.email,
+          subject: data.subject,
+          message: data.message,
+        },
+        import.meta.env.VITE_YOUR_PUBLIC_KEY
+      )
+      .then(
+        () => {
+          reset();
+          alert("Message is successfuly ");
+        },
+        (error) => {
+          alert("Message is Failed ");
+        }
+      );
+   
   }
 
 
@@ -30,7 +38,7 @@ function Form() {
       className="mt-12 lg:mt-0"
     >
       <input
-        {...register("from_name")}
+        {...register("user_name")}
         required
         className="w-full mb-3 p-3 px-8 bg-zinc-700/25 text-lg rounded-md "
         type="text"
