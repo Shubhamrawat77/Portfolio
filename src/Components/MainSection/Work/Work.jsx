@@ -43,7 +43,7 @@ function Work() {
 
 
   return (
-    <div className="w-full p-8 lg:p-16">
+    <div id='work' className="w-full p-8 lg:p-16">
       <h2 className="font-Quicksend text-sm mb-4 tracking-widest">MY WORK</h2>
       <h3 className="font-playfair font-semibold tracking-widest">
         MY RECENT PROJECTS

@@ -1,3 +1,4 @@
+
 import MainSection from "./Components/MainSection/MainSection";
 import Navbar from "./Components/Navbar/Navbar"
 
@@ -6,7 +7,7 @@ function App() {
     <>
       <div className="bg-zinc-800 text-white relative">
         <Navbar />
-        <MainSection/>
+        <MainSection />
       </div>
     </>
   );

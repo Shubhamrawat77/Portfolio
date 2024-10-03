@@ -29,7 +29,7 @@ function Home() {
    },[]);
 
   return (
-    <div className='bg-red-400 bg-cover bg-center h-screen lg:bg-pc bg-mobile lg:p-10 p-5'>   
+    <div id='home' className='bg-red-400 bg-cover bg-center h-screen lg:bg-pc bg-mobile lg:p-10 p-5'>   
       
         <div className="lg:p-24 p-10 mt-12 text-black">
           <h1 className="text-6xl font-playfair font-extrabold tracking-tighter mb-4">

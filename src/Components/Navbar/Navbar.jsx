@@ -8,6 +8,7 @@ import { RxCross2 } from "react-icons/rx";
 
 function Navbar() {
   const [show, setShow]=useState(false)
+  const onLinkClick = ()=> setShow(false)
   return (
     <div className=" relative">
       <div
@@ -18,7 +19,7 @@ function Navbar() {
       </div>
 
       {/* For Large Screen */}
-      <div className=" lg:w-1/5 hidden h-screen bg-zinc-900 lg:flex lg:flex-col fixed z-10  ">
+      <div className=" lg:w-1/5 hidden h-screen bg-black lg:flex lg:flex-col fixed z-10  ">
         <Profile />
         <Nav />
         <Footer />
@@ -29,7 +30,7 @@ function Navbar() {
         <div className=" backdrop-blur-lg w-full lg:hidden h-screen bg-black/30 z-20 fixed ">
           <div className="  w-10/12 lg:hidden h-screen bg-zinc-900 z-20 fixed left-0 ease-in-out duration-200">
             <Profile />
-            <Nav />
+            <Nav onLinkClick={onLinkClick} />
             <Footer />
           </div>
         </div>

@@ -4,7 +4,7 @@ import Form from './Form';
 
 function Contact() {
   return (
-    <div className="w-full p-8 lg:p-16">
+    <div id='contact' className="w-full p-8 lg:p-16">
       <h2 className="font-Quicksend text-sm mb-4 tracking-widest uppercase">
         Get in Touch
       </h2>
