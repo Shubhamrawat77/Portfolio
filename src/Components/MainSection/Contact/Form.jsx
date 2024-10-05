@@ -33,10 +33,7 @@ function Form() {
 
 
   return (
-    <form
-      onSubmit={handleSubmit(submit)}
-      className="mt-12 lg:mt-0"
-    >
+    <form onSubmit={handleSubmit(submit)} className="mt-12 lg:mt-0 mb-7">
       <input
         {...register("user_name")}
         required
@@ -66,7 +63,7 @@ function Form() {
         placeholder="Message"
       />
       <input
-        className="px-3 py-2 bg-blue-700 hover:bg-blue-800 rounded-lg cursor-pointer"
+        className="px-3 py-2 bg-custom-gradient-forth hover:from-pink-500 hover:to-orange-500 rounded-lg cursor-pointer border"
         type="submit"
         value="Send Message"
       />

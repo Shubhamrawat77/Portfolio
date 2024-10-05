@@ -12,7 +12,14 @@
     font-family: 'Quicksand';
     src: url('/myPortfolio/public/font/Quicksand-VariableFont_wght.ttf')
 }
+  
+.text-gradient{
+    background-image: linear-gradient(309deg, rgb(166, 221, 255) 2.25225%, rgb(51, 194, 255) 48.0785%, rgb(0, 119, 255) 100%);
+    background-clip: text;
+    color: transparent;
+    
 
+}
 *{
     margin: 0;
     padding: 0;

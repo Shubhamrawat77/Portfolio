@@ -35,9 +35,11 @@ function Education() {
 
 
   return (
-    <div id='education' className="w-full p-8 lg:p-16">
+    <div id="education" className="w-full p-8 lg:p-16">
       <h2 className="font-Quicksend text-sm mb-4 tracking-widest">EDUCATION</h2>
-      <h3 className="font-playfair font-semibold tracking-widest">EDUCATION</h3>
+      <h3 className="font-playfair font-semibold tracking-widest drop-shadow-text-xl uppercase">
+        <span className="text-gradient"> EDUCATION</span>
+      </h3>
       <div>
         {educationDetails.map((data, index) => (
           <College key={index} data={data} />

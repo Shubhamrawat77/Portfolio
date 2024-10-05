@@ -35,11 +35,13 @@ function Skills() {
     },
   ];
   return (
-    <div id='skills' className="w-full p-8 lg:p-16">
+    <div id="skills" className="w-full p-8 lg:p-16">
       <h2 className="font-Quicksend text-sm mb-4 tracking-widest">
         MY SPECIALTY
       </h2>
-      <h3 className="font-playfair font-semibold tracking-widest">MY SKILLS</h3>
+      <h3 className="font-playfair font-semibold tracking-widest drop-shadow-text-xl uppercase">
+        <span className="text-gradient"> MY skills</span>
+      </h3>
       <div className="mt-14">
         <p className="font-Quicksend leading-7 text-base">
           I specialize in building responsive and interactive web pages using

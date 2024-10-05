@@ -8,14 +8,14 @@ function College({data}) {
 
   return (
     <>
-      <div className="bg-slate-950 p-5 mt-6 rounded-md flex justify-between">
-        <h1>{Course} </h1>
+      <div className="bg-custom-gradient-fifth p-5 mt-6 rounded-md flex justify-between font-Quicksend border border-slate-500">
+        <h1 className=''>{Course} </h1>
         <button onClick={() => setIsVisible(!isVisible)}>
           {isVisible ? <FiMinus/> : <FiPlus/>}
         </button>
       </div>
       {isVisible && (
-        <div className=" bg-zinc-900 border-b-2 border-t-0 border-slate-300 border flex justify-between rounded-md">
+        <div className=" bg-custom-gradient-second border-b-2 border-t-0 border-slate-300 border flex justify-between rounded-md">
           <p className="p-6 ">{collegeName}</p>
           <span className="lg:mr-6 p-6 ">{Duration}</span>
         </div>
