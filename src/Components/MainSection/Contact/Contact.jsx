@@ -1,6 +1,7 @@
 import React from 'react'
 import ContactDetails from './ContactDetails'
 import Form from './Form';
+import { motion } from 'framer-motion';
 
 function Contact() {
   return (
@@ -9,9 +10,22 @@ function Contact() {
         <h2 className="font-Quicksend text-sm mb-4 tracking-widest uppercase">
           Get in Touch
         </h2>
-        <h3 className="font-playfair font-semibold tracking-widest drop-shadow-text-xl uppercase">
+        <motion.h3
+          initial={{
+            opacity: 0,
+            x: 30,
+          }}
+          whileInView={{
+            x: 0,
+            opacity: 1,
+          }}
+          transition={{
+            duration: 0.8,
+          }}
+          className="font-playfair font-semibold tracking-widest drop-shadow-text-xl uppercase"
+        >
           <span className="text-gradient"> MY Contact</span>
-        </h3>
+        </motion.h3>
         <div className="mt-14 lg:flex lg:gap-6 font-Quicksend">
           <ContactDetails />
           <Form />

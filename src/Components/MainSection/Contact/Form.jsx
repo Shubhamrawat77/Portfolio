@@ -1,6 +1,7 @@
 import React from 'react'
 import { useForm } from 'react-hook-form';
 import emailjs from "@emailjs/browser";
+import { motion } from 'framer-motion';
 
 function Form() {
   const{register,handleSubmit,reset}=useForm()
@@ -62,7 +63,10 @@ function Form() {
         className="w-full mb-3 p-3 px-8 bg-zinc-700/25 text-lg rounded-md "
         placeholder="Message"
       />
-      <input
+      <motion.input
+      whileTap={{
+        scale:0.9
+      }}
         className="px-3 py-2 bg-custom-gradient-forth hover:from-pink-500 hover:to-orange-500 rounded-lg cursor-pointer border"
         type="submit"
         value="Send Message"

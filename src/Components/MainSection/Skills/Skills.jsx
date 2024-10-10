@@ -1,5 +1,6 @@
 import React from 'react'
 import Skill from './Skill';
+import { motion } from 'framer-motion';
 
 function Skills() {
   const skillDetails = [
@@ -39,9 +40,22 @@ function Skills() {
       <h2 className="font-Quicksend text-sm mb-4 tracking-widest">
         MY SPECIALTY
       </h2>
-      <h3 className="font-playfair font-semibold tracking-widest drop-shadow-text-xl uppercase">
+      <motion.h3
+        initial={{
+          opacity: 0,
+          x: 30,
+        }}
+        whileInView={{
+          x: 0,
+          opacity: 1,
+        }}
+        transition={{
+          duration: 0.8,
+        }}
+        className="font-playfair font-semibold tracking-widest drop-shadow-text-xl uppercase"
+      >
         <span className="text-gradient"> MY skills</span>
-      </h3>
+      </motion.h3>
       <div className="mt-14">
         <p className="font-Quicksend leading-7 text-base">
           I specialize in building responsive and interactive web pages using

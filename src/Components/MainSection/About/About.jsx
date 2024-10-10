@@ -1,12 +1,26 @@
 import React from 'react'
+import { motion } from 'framer-motion';
 
 function About() {
   return (
     <div id="about" className="w-full p-8 lg:p-16 ">
       <h2 className="font-Quicksend text-sm mb-4 tracking-widest">ABOUT US</h2>
-      <h3 className="font-playfair font-semibold tracking-widest drop-shadow-text-xl uppercase">
+      <motion.h3
+        initial={{
+          opacity: 0,
+          x: 30,
+        }}
+        whileInView={{
+          x: 0,
+          opacity: 1,
+        }}
+        transition={{
+          duration: 0.8,
+        }}
+        className="font-playfair font-semibold tracking-widest drop-shadow-text-xl uppercase"
+      >
         <span className="text-gradient"> WHO I AM</span>
-      </h3>
+      </motion.h3>
       <p className="font-Quicksend mt-14 font-medium leading-7">
         Hi, I'm <strong>Shubham Rawat</strong>, a passionate frontend developer
         . I specialize in HTML, CSS, and JavaScript, and I’m proficient in

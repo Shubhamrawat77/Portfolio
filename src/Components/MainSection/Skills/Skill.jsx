@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from 'framer-motion';
 
 function Skill({data}) {
   const {skill,level,color}=data;
@@ -8,8 +9,17 @@ function Skill({data}) {
         {skill}
       </h1>
       <div className="w-full h-[6px] bg-slate-400 rounded-md">
-        <div
-          style={{ width:level , backgroundColor: color }}
+        <motion.div
+          initial={{
+            width: 0,
+          }}
+          whileInView={{
+            width: level,
+          }}
+          transition={{
+            duration: 1,
+          }}
+          style={{ width: level, backgroundColor: color }}
           className="h-full rounded-md relative"
         >
           <span
@@ -22,7 +32,7 @@ function Skill({data}) {
           >
             {level}
           </span>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

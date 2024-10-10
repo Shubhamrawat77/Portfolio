@@ -1,4 +1,5 @@
 
+import { motion } from 'framer-motion';
 import College from './College';
 
 function Education() {
@@ -37,9 +38,22 @@ function Education() {
   return (
     <div id="education" className="w-full p-8 lg:p-16">
       <h2 className="font-Quicksend text-sm mb-4 tracking-widest">EDUCATION</h2>
-      <h3 className="font-playfair font-semibold tracking-widest drop-shadow-text-xl uppercase">
+      <motion.h3
+        initial={{
+          opacity: 0,
+          x: 30,
+        }}
+        whileInView={{
+          x: 0,
+          opacity: 1,
+        }}
+        transition={{
+          duration: 0.8,
+        }}
+        className="font-playfair font-semibold tracking-widest drop-shadow-text-xl uppercase"
+      >
         <span className="text-gradient"> EDUCATION</span>
-      </h3>
+      </motion.h3>
       <div>
         {educationDetails.map((data, index) => (
           <College key={index} data={data} />
