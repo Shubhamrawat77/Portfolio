@@ -6,6 +6,7 @@ import { FiMenu } from "react-icons/fi";
 import { RxCross2 } from "react-icons/rx";
 
 
+
 function Navbar() {
   const [show, setShow]=useState(false)
   const onLinkClick = ()=> setShow(false)
@@ -15,11 +16,15 @@ function Navbar() {
         onClick={() => setShow(!show)}
         className=" fixed lg:hidden text-4xl mt-3 cursor-pointer z-30 "
       >
-        {show ? <RxCross2 /> : <FiMenu />}
+        {show ? (
+          <RxCross2 />
+        ) : (
+            <FiMenu />
+        )}
       </div>
 
       {/* For Large Screen */}
-      <div className=" lg:w-1/5 hidden h-screen bg-custom-gradient-second lg:flex lg:flex-col fixed z-10  ">
+      <div className=" lg:w-1/5 hidden h-screen bg-custom-gradient-second lg:flex lg:flex-col justify-evenly fixed z-10  ">
         <Profile />
         <Nav />
         <Footer />

@@ -34,7 +34,22 @@ function Form() {
 
 
   return (
-    <form onSubmit={handleSubmit(submit)} className="mt-12 lg:mt-0 mb-7">
+    <motion.form
+      initial={{
+        x: 20,
+        opacity: 0,
+      }}
+      whileInView={{
+        x: 0,
+        opacity: 1,
+      }}
+      transition={{
+        duration: 2.5,
+        type: "spring",
+      }}
+      onSubmit={handleSubmit(submit)}
+      className="mt-12 lg:mt-0 mb-7"
+    >
       <input
         {...register("user_name")}
         required
@@ -64,14 +79,14 @@ function Form() {
         placeholder="Message"
       />
       <motion.input
-      whileTap={{
-        scale:0.9
-      }}
-        className="px-3 py-2 bg-custom-gradient-forth hover:from-pink-500 hover:to-orange-500 rounded-lg cursor-pointer border"
+        whileTap={{
+          scale: 0.9,
+        }}
+        className="px-3 py-2 group bg-gradient-to-r from-teal-500 to-blue-800 hover:from-pink-500 hover:to-orange-500 rounded-lg cursor-pointer border"
         type="submit"
         value="Send Message"
       />
-    </form>
+    </motion.form>
   );
 }
 

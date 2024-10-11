@@ -8,6 +8,15 @@ function Projects({item}) {
   const {image,name,description,link,gitLink}=item
   return (
     <motion.div
+      initial={{
+        scale:0.9,
+      }}
+      whileInView={{
+        scale:1
+      }}
+      transition={{
+        duration:1
+      }}
       whileHover={{ scale: 1.01 }}
       className="xl:w-[30%] lg:w-[48%] md:w-[48%] mt-5 bg rounded-lg bg-custom-gradient-second border border-slate-500 group  "
     >
