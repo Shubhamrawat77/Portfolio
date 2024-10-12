@@ -10,7 +10,7 @@ import Contact from './Contact/Contact'
 
 function MainSection() {
   return (
-    <div className='lg:ml-[20%]'>
+    <div className='lg:ml-[20%] '>
         <Home/>
         <About/>
         <Work/>

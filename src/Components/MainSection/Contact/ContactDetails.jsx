@@ -22,10 +22,14 @@ function ContactDetails() {
           duration: 1,
           type: "spring",
         }}
-        className="flex items-center gap-8 p-5 bg-zinc-700/20 rounded-md"
+        className=" p-5 bg-zinc-700/20 rounded-md"
       >
-        <GrMail className="text-3xl" />
-        <a target="blank" href="mailto:s=shubhamrawat@77gmail.com">
+        <a
+          className="flex items-center md:gap-8 gap-4"
+          target="blank"
+          href="mailto:s=shubhamrawat@77gmail.com"
+        >
+          <GrMail className="text-3xl" />
           Shubhamrawatt77@gmail.com
         </a>
       </motion.div>
@@ -42,10 +46,14 @@ function ContactDetails() {
           duration: 1.2,
           type: "spring",
         }}
-        className="flex items-center gap-8 p-5 bg-zinc-700/20 mt-5 rounded-md"
+        className=" p-5 bg-zinc-700/20 mt-5 rounded-md"
       >
-        <IoMdCall className="text-3xl" />
-        <a target="blank" href="tel:+917017233103">
+        <a
+          className="flex items-center gap-8"
+          target="blank"
+          href="tel:+917017233103"
+        >
+          <IoMdCall className="text-3xl" />
           +917017233103
         </a>
       </motion.div>

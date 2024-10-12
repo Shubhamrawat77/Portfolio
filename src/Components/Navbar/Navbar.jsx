@@ -14,7 +14,7 @@ function Navbar() {
     <div className=" relative">
       <div
         onClick={() => setShow(!show)}
-        className=" fixed lg:hidden text-4xl mt-3 cursor-pointer z-30 "
+        className=" fixed lg:hidden text-3xl mt-3 cursor-pointer z-30 "
       >
         {show ? (
           <RxCross2 />

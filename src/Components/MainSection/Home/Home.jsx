@@ -58,7 +58,7 @@ function Home() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="lg:p-24 md:p-14 md:mt-60 mt-12 lg:mt-12 w-4/5 lg:w-full md:w-full p-10  text-black"
+            className="lg:p-24 md:p-14 md:mt-60 mt-12 lg:mt-12 w-3/4 lg:w-full md:w-full p-2  text-black"
           >
             <h1 className="lg:text-6xl text-5xl font-playfair font-extrabold tracking-tighter mb-4">
               {userData.title}

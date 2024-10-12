@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-scroll'
 
+
 function Nav({onLinkClick}) {
 
 const data= ["Home", "About", "Work", "Skills", "Education", "Contact"]
